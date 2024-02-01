@@ -1,0 +1,80 @@
+//main: ../style.less
+
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+
+    @media @mobile {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1000;
+        
+        background-color: #FFF;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+        text-align: center;
+
+        display: none;
+        
+        &.show{
+            display: flex;
+            
+        }
+    }
+}
+
+.nav__link{
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: @black;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    margin-left: 2rem;
+
+    position: relative;
+
+    &:after{
+    content:"";
+    width: 0%;
+    height: 2px ;
+    background-color: @black;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    z-index: 1;
+    transition: width .2s linear;
+    }
+    
+    &:hover:not(.nav__link--btn){
+        &:after{
+    width: 100%;
+        }
+    }
+
+    &--btn{
+        border: 2px solid @black;
+        border-radius: 20px;
+        padding: .66rem 2rem;
+
+        &:hover{
+            background-color: @black;
+            color: @white;
+            transition: background .2s linear, color .2s linear;
+        }
+    }
+
+    @media @mobile{
+        width: 100%;
+        margin-left: 0;
+        padding: .5rem 1rem;
+    }
+}

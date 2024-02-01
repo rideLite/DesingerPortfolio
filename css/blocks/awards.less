@@ -1,0 +1,49 @@
+//main: ../style.less
+
+.awards{
+    
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: @black;
+    margin-top: 2rem;
+}
+
+.awards__item{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.awards__date{
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.awards__name{
+    font-size: 1.06rem;
+    padding-left: 2rem;
+    
+}
+
+.awards__giver{
+    font-size: .94rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: .8rem;
+}
+
+.awards__text{
+    width: 290px;
+    font-size: .8rem;
+    font-weight: 300;
+
+    @media @tablet {
+        width: 200px
+    }
+    @media @mobile {
+        margin-bottom: -1rem;
+    }
+
+    @media @mobile-sm {
+        width: 180px
+    }
+}
